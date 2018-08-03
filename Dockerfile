@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y wget xauth libxtst6 libxi6 git qt5-default qt4-linguist-tools qt5-qmake qttools5-dev build-essential android-tools-adb zipalign unzip libc++1 mesa-utils libgl1-mesa-glx && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y wget xauth libxtst6 libxi6 git qt5-default qt4-linguist-tools qt5-qmake qttools5-dev build-essential android-tools-adb zipalign unzip libc++1 mesa-utils libgl1-mesa-glx libpulse.so.0 && \
     mkdir -p /root/bin && echo export PATH=\$PATH:/root/bin && \
     mkdir -p /opt && cd /opt && \
     wget -O intellij.tar.gz "https://data.services.jetbrains.com/products/download?code=IIU&platform=linux" && \

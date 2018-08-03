@@ -10,7 +10,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade && 
     cd /opt && wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui-1.4.0.jar && \
     echo alias jd-gui=\"java -jar /opt/jd-gui-1.4.0.jar\" >> ~/.bashrc && \
     cd /opt && git clone --depth=1 https://github.com/vaibhavpandeyvpz/apkstudio.git && \
-    mkdir -p ~/.apkstudio/vendor/ && cd ~/.apkstudio/vendor/ && wget -O apktool.jar "https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.3.3.jar" && wget -O uber-apk-signer.jar "https://github.com/patrickfav/uber-apk-signer/releases/download/v0.8.4/uber-apk-signer-0.8.4.jar" && echo alias apktool=\'java -jar /root/.apkstudio/vendor/apktool.jar\' >> ~/.bashrc && echo alias uber-apk-signer=\'java -jar /root/.apkstudio/vendor/uber-apk-signer.jar\' >> ~/.bash \
+    mkdir -p ~/.apkstudio/vendor/ && cd ~/.apkstudio/vendor/ && wget -O apktool.jar "https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.3.3.jar" && wget -O uber-apk-signer.jar "https://github.com/patrickfav/uber-apk-signer/releases/download/v0.8.4/uber-apk-signer-0.8.4.jar" && echo alias apktool=\'java -jar /root/.apkstudio/vendor/apktool.jar\' >> ~/.bashrc && echo alias uber-apk-signer=\'java -jar /root/.apkstudio/vendor/uber-apk-signer.jar\' >> ~/.bash && \
     cd /opt/apkstudio && lrelease res/lang/en.ts && qmake apkstudio.pro CONFIG+=release && make -j`nproc` && echo export PATH=\$PATH:/opt/apkstudio >> ~/.bashrc && \
     cd /opt && wget "https://github.com/pxb1988/dex2jar/releases/download/2.0/dex-tools-2.0.zip" && unzip dex-tools-2.0.zip && cd /opt/dex2jar-2.0 && chmod +x *.sh && echo export PATH=\$PATH:/opt/dex2jar-2.0 >> ~/.bashrc && \
     echo cat ~/README.md >> ~/.bashrc

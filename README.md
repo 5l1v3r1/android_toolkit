@@ -13,7 +13,7 @@ sudo docker build -t android .
 Pre-built images are on Dockerhub. To run without having to build yourself, use something like this:
 
 ```
-sudo docker run -it --rm --network host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --shm-size 2G -v /dev/kvm:/dev/kvm --privileged bannsec/android_toolkit
+sudo docker run -it --rm --network host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --shm-size 2G -v /dev/kvm:/dev/kvm --privileged -h android --name android bannsec/android_toolkit
 ```
 
 # Installed tools
